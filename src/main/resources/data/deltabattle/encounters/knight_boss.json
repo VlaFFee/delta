@@ -1,0 +1,240 @@
+{
+  "intro": "The Dark Knight bars the path.",
+  "exp": 20,
+  "gold": 10,
+  "party_hp": 80,
+  "player_atk": 24,
+  "bg": "#08000F",
+  "grid": "#2A0A44",
+  "win_text": "YOU WON!\nThe Dark Knight bows and vanishes.",
+  "spare_text": "The Dark Knight lowers its blade and leaves.",
+  "reward_items": [
+    {
+      "item": "minecraft:diamond",
+      "count": 2
+    }
+  ],
+  "win_commands": [
+    "say @s defeated the Dark Knight!"
+  ],
+  "spells": [
+    {
+      "name": "Heal Prayer",
+      "text": "%1$s prays. The party is healed!",
+      "tp_cost": 32,
+      "type": "heal_party",
+      "power": 8,
+      "slot": 2
+    },
+    {
+      "name": "Rude Buster",
+      "text": "%1$s used RUDE BUSTER!",
+      "tp_cost": 50,
+      "type": "damage",
+      "power": 45,
+      "slot": 1
+    },
+    {
+      "name": "Pacify",
+      "text": "%1$s cast PACIFY!",
+      "tp_cost": 40,
+      "type": "mercy",
+      "power": 60,
+      "slot": 2
+    }
+  ],
+  "enemies": [
+    {
+      "name": "Dark Knight",
+      "hp": 400,
+      "atk": 10,
+      "def": 3,
+      "texture": "deltabattle:textures/gui/knight.png",
+      "tex_w": 48,
+      "tex_h": 64,
+      "width": 84,
+      "height": 112,
+      "bob": 3,
+      "flavor": [
+        "The Dark Knight stands still.",
+        "Cold air fills the room."
+      ],
+      "flavor_low": "The Dark Knight is breathing hard.",
+      "flavor_spareable": "The Dark Knight lowers its guard.",
+      "acts": [
+        {
+          "name": "Check",
+          "text": "DARK KNIGHT - ATK 10 DEF 3\nGuardian of the dark door."
+        },
+        {
+          "name": "Salute",
+          "text": "You saluted. The Knight nods.",
+          "reply": "...Respect.",
+          "mercy": 25
+        },
+        {
+          "name": "Challenge",
+          "text": "You challenged the Knight!",
+          "reply": "Come then.",
+          "mercy": 25,
+          "tp_cost": 0
+        }
+      ],
+      "dialogue": [
+        "Halt.",
+        "None shall pass."
+      ],
+      "attack_mode": "sequence",
+      "attacks": [
+        {
+          "pattern": "sweep",
+          "count": 12,
+          "speed": 8.0,
+          "interval": 8,
+          "start": 8,
+          "radius": 7,
+          "duration": 160,
+          "box_w": 170,
+          "box_h": 120
+        },
+        {
+          "pattern": "bounce",
+          "count": 6,
+          "speed": 3.52,
+          "interval": 10,
+          "start": 8,
+          "radius": 7,
+          "duration": 160,
+          "box_w": 150,
+          "box_h": 150
+        }
+      ],
+      "phases": [
+        {
+          "hp_pct": 60,
+          "notice": "The Knight draws a second blade!",
+          "dialogue": [
+            "Not bad."
+          ],
+          "attacks": [
+            {
+              "pattern": "ring",
+              "count": 14,
+              "speed": 2.88,
+              "interval": 26,
+              "waves": 4,
+              "gap": 2,
+              "start": 8,
+              "radius": 7,
+              "duration": 170,
+              "box_w": 160,
+              "box_h": 140
+            },
+            {
+              "pattern": "aimed",
+              "count": 8,
+              "speed": 4.8,
+              "interval": 8,
+              "start": 8,
+              "delay": 22,
+              "radius": 7,
+              "duration": 160,
+              "from": "random",
+              "damage": 12,
+              "say": "Hold still!",
+              "say_tick": 10
+            }
+          ],
+          "music": "deltabattle:music.battle2"
+        },
+        {
+          "hp_pct": 30,
+          "notice": "The Knight is furious!",
+          "dialogue": [
+            "ENOUGH!",
+            "FALL!"
+          ],
+          "attacks": [
+            {
+              "pattern": "spiral",
+              "count": 28,
+              "speed": 3.84,
+              "interval": 4,
+              "start": 6,
+              "angle_step": 0.5,
+              "radius": 7,
+              "duration": 170,
+              "damage": 14,
+              "box_w": 160,
+              "box_h": 160
+            },
+            {
+              "pattern": "rain",
+              "count": 22,
+              "speed": 5.76,
+              "interval": 6,
+              "start": 6,
+              "radius": 7,
+              "wobble": 10,
+              "duration": 160,
+              "damage": 14
+            }
+          ]
+        },
+        {
+          "turn": 8,
+          "notice": "The Knight loses patience...",
+          "dialogue": [
+            "Enough games!"
+          ],
+          "attacks": [
+            {
+              "pattern": "bounce",
+              "count": 10,
+              "speed": 3.6,
+              "interval": 8,
+              "start": 8,
+              "radius": 7,
+              "duration": 170,
+              "damage": 14,
+              "box_w": 170,
+              "box_h": 150
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "music": "deltabattle:music.battle1",
+  "cues": [
+    {
+      "when": "start",
+      "text": "The Dark Knight bars the path.\nThe air turns cold."
+    },
+    {
+      "when": "turn",
+      "n": 3,
+      "enemy": 0,
+      "dialogue": "You are persistent."
+    },
+    {
+      "when": "hp_below",
+      "n": 60,
+      "enemy": 0,
+      "text": "The Knight's armor cracks.",
+      "sfx": "minecraft:block.anvil.land"
+    },
+    {
+      "when": "hp_below",
+      "n": 30,
+      "enemy": 0,
+      "music": "deltabattle:music.battle2",
+      "dialogue": "I will not fall here!"
+    },
+    {
+      "when": "enemy_spared",
+      "enemy": 0,
+      "music": "stop"
+    }
+  ]
+}

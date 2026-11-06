@@ -1,0 +1,98 @@
+{
+  "intro": "deltabattle.flavor.start",
+  "exp": 3,
+  "gold": 2,
+  "win_text": "deltabattle.end.froggit_win",
+  "spare_text": "deltabattle.end.froggit_spare",
+  "world_texture": "deltabattle:textures/entity/froggit.png",
+  "enemies": [
+    {
+      "name": "deltabattle.froggit",
+      "hp": 30,
+      "atk": 4,
+      "def": 5,
+      "texture": "deltabattle:textures/gui/froggit.png",
+      "tex_w": 48,
+      "tex_h": 48,
+      "width": 96,
+      "height": 96,
+      "flavor": [
+        "deltabattle.flavor.n0",
+        "deltabattle.flavor.n1",
+        "deltabattle.flavor.n2",
+        "deltabattle.flavor.n3"
+      ],
+      "flavor_spareable": "deltabattle.flavor.reluctant",
+      "flavor_low": "deltabattle.flavor.runaway",
+      "acts": [
+        {
+          "name": "deltabattle.menu.act0",
+          "text": "deltabattle.act.check"
+        },
+        {
+          "name": "deltabattle.menu.act1",
+          "text": "deltabattle.act.compliment",
+          "reply": "deltabattle.say.blush",
+          "mercy": 100
+        },
+        {
+          "name": "deltabattle.menu.act2",
+          "text": "deltabattle.act.threaten",
+          "reply": "deltabattle.say.shiver",
+          "mercy": 100
+        }
+      ],
+      "dialogue": [
+        "deltabattle.say.ribbit",
+        "deltabattle.say.croak",
+        "deltabattle.say.hop",
+        "deltabattle.say.meow"
+      ],
+      "attacks": [
+        {
+          "pattern": "aimed",
+          "texture": "deltabattle:textures/gui/fly.png",
+          "w": 9,
+          "h": 6,
+          "radius": 6,
+          "count": 5,
+          "speed": 2.66,
+          "interval": 9,
+          "start": 10,
+          "delay": 26,
+          "hover": 22,
+          "duration": 150,
+          "weight": 46,
+          "scale": 2
+        },
+        {
+          "pattern": "hop",
+          "texture": "deltabattle:textures/gui/frog.png",
+          "w": 15,
+          "h": 12,
+          "radius": 9,
+          "count": 1,
+          "start": 8,
+          "duration": 150,
+          "weight": 46,
+          "scale": 2
+        },
+        {
+          "pattern": "rain",
+          "texture": "deltabattle:textures/gui/fly.png",
+          "w": 9,
+          "h": 6,
+          "radius": 6,
+          "count": 5,
+          "speed": 2.1,
+          "interval": 6,
+          "start": 7,
+          "wobble": 6,
+          "duration": 150,
+          "weight": 8,
+          "scale": 2
+        }
+      ]
+    }
+  ]
+}

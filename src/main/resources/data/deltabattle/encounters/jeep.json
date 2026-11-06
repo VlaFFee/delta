@@ -1,0 +1,128 @@
+{
+  "intro": "A Jeep?",
+  "exp": 5,
+  "gold": 3,
+  "party_hp": 60,
+  "player_atk": 22,
+  "win_text": "YOU WON!\nGot 5 EXP and 3 gold.",
+  "spells": [
+    {
+      "name": "Heal Prayer",
+      "text": "%1$s prays. The party is healed!",
+      "tp_cost": 32,
+      "type": "heal_party",
+      "power": 8,
+      "slot": 2
+    },
+    {
+      "name": "Rude Buster",
+      "text": "%1$s used RUDE BUSTER!",
+      "tp_cost": 50,
+      "type": "damage",
+      "power": 45,
+      "slot": 1
+    },
+    {
+      "name": "Pacify",
+      "text": "%1$s cast PACIFY!",
+      "tp_cost": 40,
+      "type": "mercy",
+      "power": 60,
+      "slot": 2
+    }
+  ],
+  "enemies": [
+    {
+      "name": "Jeep",
+      "hp": 220,
+      "atk": 9,
+      "def": 2,
+      "texture": "deltabattle:textures/gui/jeep.png",
+      "tex_w": 64,
+      "tex_h": 36,
+      "width": 128,
+      "height": 72,
+      "bob": 2,
+      "flavor": [
+        "The Jeep revs its engine.",
+        "Smells like gasoline.",
+        "The Jeep idles menacingly."
+      ],
+      "flavor_spareable": "The Jeep seems satisfied.",
+      "flavor_low": "The Jeep is steaming.",
+      "acts": [
+        {
+          "name": "Check",
+          "text": "JEEP - ATK 9 DEF 2\nAn off-road vehicle. Not sure why it's here."
+        },
+        {
+          "name": "Honk",
+          "text": "You honked. The Jeep honked back.",
+          "reply": "HONK HONK!",
+          "mercy": 40
+        },
+        {
+          "name": "Wash",
+          "text": "You washed the Jeep. It sparkles!",
+          "reply": "Vroom~",
+          "mercy": 60
+        }
+      ],
+      "dialogue": [
+        "Vroom!",
+        "Beep beep!",
+        "*engine noises*"
+      ],
+      "attack_mode": "sequence",
+      "attacks": [
+        {
+          "pattern": "sweep",
+          "count": 10,
+          "speed": 7.2,
+          "interval": 9,
+          "start": 8,
+          "radius": 7,
+          "duration": 150,
+          "box_w": 160,
+          "box_h": 120
+        },
+        {
+          "pattern": "rain",
+          "count": 14,
+          "speed": 4.8,
+          "interval": 8,
+          "start": 8,
+          "radius": 7,
+          "duration": 150
+        },
+        {
+          "pattern": "ring",
+          "count": 12,
+          "speed": 2.56,
+          "interval": 30,
+          "start": 8,
+          "waves": 3,
+          "gap": 2,
+          "radius": 7,
+          "duration": 150,
+          "box_w": 150,
+          "box_h": 130
+        }
+      ]
+    }
+  ],
+  "cues": [
+    {
+      "when": "turn",
+      "n": 2,
+      "enemy": 0,
+      "dialogue": "HONK HONK!"
+    },
+    {
+      "when": "hp_below",
+      "n": 50,
+      "enemy": 0,
+      "text": "The Jeep is smoking!"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+ "music.battle1": {
+  "category": "music",
+  "sounds": [
+   {
+    "name": "deltabattle:music/battle1",
+    "stream": true
+   }
+  ]
+ },
+ "music.battle2": {
+  "category": "music",
+  "sounds": [
+   {
+    "name": "deltabattle:music/battle2",
+    "stream": true
+   }
+  ]
+ },
+ "music.battle3": {
+  "category": "music",
+  "sounds": [
+   {
+    "name": "deltabattle:music/battle3",
+    "stream": true
+   }
+  ]
+ },
+ "music.battle4": {
+  "category": "music",
+  "sounds": [
+   {
+    "name": "deltabattle:music/battle4",
+    "stream": true
+   }
+  ]
+ },
+ "music.battle5": {
+  "category": "music",
+  "sounds": [
+   {
+    "name": "deltabattle:music/battle5",
+    "stream": true
+   }
+  ]
+ },
+ "music.battle6": {
+  "category": "music",
+  "sounds": [
+   {
+    "name": "deltabattle:music/battle6",
+    "stream": true
+   }
+  ]
+ }
+}

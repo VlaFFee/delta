@@ -1,0 +1,94 @@
+{
+  "intro": "Two enemies block the way!",
+  "exp": 4,
+  "gold": 2,
+  "party_hp": 40,
+  "bg": "#050510",
+  "grid": "#12123A",
+  "enemies": [
+    {
+      "name": "Rudinn",
+      "hp": 60,
+      "atk": 6,
+      "def": 1,
+      "texture": "deltabattle:textures/gui/rudinn.png",
+      "tex_w": 32,
+      "tex_h": 32,
+      "width": 80,
+      "height": 80,
+      "flavor": [
+        "Rudinn shuffles its cards."
+      ],
+      "acts": [
+        {
+          "name": "Check",
+          "text": "RUDINN - ATK 6 DEF 1\nA diamond-shaped soldier."
+        },
+        {
+          "name": "Compliment",
+          "text": "You complimented Rudinn. It blushes!",
+          "reply": "Diamonds!",
+          "mercy": 100
+        }
+      ],
+      "dialogue": [
+        "Diamonds!"
+      ],
+      "attacks": [
+        {
+          "pattern": "aimed",
+          "count": 6,
+          "speed": 3.84,
+          "interval": 10,
+          "start": 8,
+          "delay": 20,
+          "radius": 7,
+          "duration": 150,
+          "from": "random"
+        }
+      ]
+    },
+    {
+      "name": "Hathy",
+      "hp": 50,
+      "atk": 5,
+      "def": 0,
+      "texture": "deltabattle:textures/gui/hathy.png",
+      "tex_w": 32,
+      "tex_h": 32,
+      "width": 80,
+      "height": 80,
+      "flavor": [
+        "Hathy is spreading love."
+      ],
+      "acts": [
+        {
+          "name": "Check",
+          "text": "HATHY - ATK 5 DEF 0\nIts heart is full of love."
+        },
+        {
+          "name": "Hug",
+          "text": "You hugged Hathy.",
+          "reply": "<3",
+          "mercy": 100
+        }
+      ],
+      "dialogue": [
+        "Love!",
+        "<3"
+      ],
+      "attacks": [
+        {
+          "pattern": "spiral",
+          "count": 20,
+          "speed": 3.52,
+          "interval": 5,
+          "start": 6,
+          "angle_step": 0.6,
+          "radius": 7,
+          "duration": 150
+        }
+      ]
+    }
+  ]
+}
